@@ -79,7 +79,9 @@ Examples:
 */
 
 function hasCertainKey(arr, key) {
-    // finished off here
+    return arr.every(function(val) {
+        return val[key]
+    })
 }
 
 /*
@@ -100,4 +102,8 @@ Examples:
     
 */
 
-function hasCertainValue(arr, key, searchValue) {}
+function hasCertainValue(arr, key, searchValue) {
+    return arr.every(function(val) {
+        return val[key] === searchValue
+    })
+}
